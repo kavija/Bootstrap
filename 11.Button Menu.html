@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Menus & Buttons</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2>Button groups</h2>
+                <!-- btn-toolbar joins the btn-group elements -->
+                <div class="btn-toolbar">
+                    <!-- btn-group groups the buttons -->
+                    <div class="btn-group">
+                        <button class="btn"><i class="icon-backward"></i></button>
+                        <button class="btn"><i class="icon-play"></i></button>
+                        <button class="btn"><i class="icon-forward"></i></button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn"><i class="icon-plus"></i></button>
+                        <button class="btn"><i class="icon-minus"></i></button>
+                        <button class="btn"><i class="icon-asterisk"></i></button>
+                    </div>
+                </div>
+                <hr />
+                <h2>Buttons with menus</h2>
+                
+                <div class="btn-toolbar">
+                    <!-- dropup class makes the caret upwards -->
+                    <div class="btn-group dropup">
+                        <!-- it totally differs from the previous sameple -->
+                        <!-- it accepts all the buttpon related classes eg: primary, large.. -->
+                        <a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">See the sites
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
+                            <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
+                        </ul>
+                    </div>                   
+                    <div class="btn-group">
+                        <!-- split buttons -->
+                        <!-- first button can handle its own action -->
+                        <a class="btn btn-large btn-primary" href="#">See the sites</a>
+                        <!-- clicking on the carent would show the dropdown menu -->
+                        <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="caret"></span>
+                        </a>
+                        <!-- dropdown-menu class to a <ul> element to actually build the dropdown menu. -->
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="http://pluralsight.com">Pluralsight</a></li>
+                            <li><a tabindex="-1" href="http://amazon.com">Amazon</a></li>
+                        </ul>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

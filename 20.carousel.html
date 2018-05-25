@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Other Components</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2 id="carousel">Carousel</h2>
+                <!-- "carousel" specifies that it is a carousel -->
+                <!-- "slide" controls the sliding efforts -->
+                <div id="slidingcarousel" class="carousel slide">
+                    <!-- "carousel-inner" container that holds carousels -->
+                    <div class="carousel-inner">
+                        <!-- "item" specifies the carousel -->
+                        <div class="item">
+                            <img src="images/lobster.jpg" />
+                            <!-- "carousel-caption" controls text displayed on the carousel -->
+                            <div class="carousel-caption">
+                                <h4>Lobster!</h4>
+                                <p>A lobster dinner at the House of Elliot in Ghent, Belgium.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/IMG_0241.JPG" />  
+                            <div class="carousel-caption">
+                                <h4>A Church!</h4>
+                                <p>The church was magnificent, and even had a singing choir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- "carousel-control left" makes it as a naviagion control   -->
+                    <!-- data-slide="prev" conrols the direction -->
+                    <a class="carousel-control left" href="#slidingcarousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#slidingcarousel" data-slide="next">&rsaquo;</a>
+                </div>
+
+                <script>
+                    $(function () {
+                        //all the element that has .carousel is converted into carousel.
+                        $('.carousel').carousel({
+                            //2secs interval is set
+                            interval: 2000
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

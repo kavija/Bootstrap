@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Other Components</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #ddddcc;
+            margin-top:40px;
+        }
+    </style>
+</head>
+<!-- data-spy="scroll" specifies that this container should be watched to support navspy -->
+<!-- data-target=".navspy" which element should get updated when the page is scrolled -->
+<!-- data-offset="40" specifies that body margin-top is set to be 40px; -->
+<body data-spy="scroll" data-target=".navspy" data-offset="40">
+
+    <nav class="nav navbar navbar-inverse navbar-fixed-top">
+        <!-- navspy would make this component as target component when page is scrolled -->
+        <div class="navbar-inner navspy">
+            <a class="brand" href="#">JavaScript</a>
+            <ul class="nav">
+                <!-- href="#buttons" represents the corresponding h2 element -->
+                <!-- when the corresponding h2 element is at the top, it would highlight the anchor tag -->
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#modal">Modal</a></li>
+                <li><a href="#tooltips">Tooltips</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content section -->
+    <div class="container">
+        <div class="row">
+            <div class="span10">
+                <!-- id="buttons" is used to support navspy -->
+                <h2 id="buttons">More Buttons</h2>
+                <div>
+                    Some content goes here...
+                </div>
+                <!-- id="buttons" is used to support navspy -->
+                <h2 id="modal">Modal</h2>
+                <div>
+                    Some content goes here...
+                </div>
+                <!-- id="buttons" is used to support navspy -->
+                <h2 id="tooltips">Tooltips</h2>
+                <div>
+                    Some content goes here...
+                </div>
+            </div>
+
+            <!-- right navigation that supports navspy -->
+            <div class="span2">
+            <!-- navspy would make this component as target component when page is scrolled -->
+                <section class="navspy">
+                    <!-- affix specifies that this section should be fixed on the page -->
+                    <ul id="navigation" class="nav nav-pills nav-stacked affix">
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#modal">Modal</a></li>
+                        <li><a href="#tooltips">Tooltips</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

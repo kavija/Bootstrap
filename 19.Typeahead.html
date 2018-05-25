@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Other Components</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+        <h2 id="language">Typeahead</h2>
+        <label>Tell me your favorite language:</label>
+        <!-- data-provide="typeahead" specifies that it supports typeahead -->
+        <!-- data-source specifies supported typeahead, it is html encoded -->
+        <input id="languageInput" type="text" 
+            data-provide="typeahead" data-items="4" 
+            data-source="[&quot;JavaScript&quot;,&quot;C#&quot;,&quot;Java&quot;,&quot;C++&quot;]">               
+
+    <script>
+        // function that replaces the existing typeahead values specified in the data-source
+        $(function () {
+            $("#languageInput").typeahead({ source: ["Lisp", "Clojure", "F#", "Haskell"] });
+        });
+    </script> 
+</body>
+</html>

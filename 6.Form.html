@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />   
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2>Default Form</h2>
+                <form action="/signup" method="post">
+                    <fieldset>
+                        <legend>To get started, provide us with the following information:</legend>
+                        <!-- Use label to define the <input> element -->
+                        <label for="UserInfo_Email">Email:</label>
+                        <input id="UserInfo_Email" name="UserInfo.Email" type="text" value="">
+                        <label for="UserInfo_FirstName">First name:</label>
+                        <input id="UserInfo_FirstName" name="UserInfo.FirstName" type="text" value="">
+                        <label for="UserInfo_LastName">Last name:</label>
+                        <input id="UserInfo_LastName" name="UserInfo.LastName" type="text" value="">
+                        <label for="UserInfo_HowHeard">How did you hear about us?</label>
+                        <select id="UserInfo_HowHeard_SelectedValue" name="UserInfo.HowHeard.SelectedValue">
+                            <option>Blogs</option>
+                            <option>Colleague</option>
+                        </select>
+                        <label for="UserInfo_JobTitle">Job title:</label>
+                        <!-- span(n) can be used with input element -->
+                        <input class="span6" id="UserInfo_JobTitle" name="UserInfo.JobTitle" type="text" value="">
+                        <div>
+                            <!-- checkbox inline makes it horizontal checkboxes -->
+                            <label class="checkbox inline">
+                                <input type="checkbox" value="">
+                                I like Pina Coladas
+                            </label>
+                            <label class="checkbox inline">
+                                <input type="checkbox" value="">
+                                I like getting caught in the rain
+                            </label>
+                        </div>
+                        <!-- radio class is used for radiobuttions -->
+                        <label class="radio">
+                            <input type="radio" name="optionsRadios" value="option1" checked>
+                            I'm into yoga                             
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            I'm not into yoga
+                        </label>
+                        <label for="describe">Describe yourself:</label>
+                        <!-- input-block-level makes it to occupy all the available space  -->
+                        <textarea class="input-block-level" id="describe" rows="3"></textarea>
+                        <!-- btn-primary makes it more visible -->
+                        <input type="submit" value="Sign Up!" class="btn btn-primary" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span6">
+                <h2>Search</h2>
+                <!-- form-search makes it as search form -->
+                <form class="form-search">
+                    <!-- type="search" class="search-query" would make it rounded inputbox  -->
+                    <input type="search" class="search-query">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <h2>Horizontal Form</h2>
+                <!-- form-horizontal should be used when controls should be displayed horizontally -->
+                <form action="/signup" method="post" class="form-horizontal">
+                    <fieldset>
+                        <legend>To get started, provide us with the following information:</legend>
+                        <!-- control-group  groups the controls -->
+                        <!-- error class would make it red -->
+                        <div class="control-group error">
+                            <!-- control-label makes it act like a label -->
+                            <label class="control-label" for="UserInfo_Email">Email:</label>
+                            <!-- controls class specifies that it is the control for the above label -->
+                            <div class="controls">
+                                <input id="Text1" name="UserInfo.Email" type="text" value="">
+                                <span class="help-block">You need to fill this out!</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <h2>Extending Inputs</h2>
+                <form action="/signup" method="post">
+                    <fieldset>
+                        <legend>To get started, provide us with the following information:</legend>
+                        <!-- you can also prepend/append the control with Text  -->
+                        <!-- input-prepend prepends the text -->
+                        <!-- input-append appends the text -->
+                        <!-- input-append & input-prepend can be used together -->
+                        <div class="input-prepend">
+                            <span class="add-on">@</span>
+                            <input id="handle" type="text" placeholder="Twitter Handle" />
+                        </div>
+
+                        <div class="input-prepend input-append">
+                            <span class="add-on">$</span>
+                            <input id="Text2" type="text" placeholder="Budget" />
+                            <span class="add-on">.00</span>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
